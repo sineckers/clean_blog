@@ -26,7 +26,7 @@
         <% posts.map((item) => { %>
         
           <div class="post-preview">
-            <a href="post.html">
+            <a href="/posts/<%= post._id %>">
               <h2 class="post-title">
                 <%= item.title %>
               </h2>
@@ -36,7 +36,7 @@
             </a>
             <p class="post-meta">Posted by
               <a href="#">Start Bootstrap</a>
-              on September 24, 2019</p>
+              <%= post.dateCreated %></p>
           </div>
           <hr>
         <% }) %>
@@ -53,11 +53,11 @@
   <%- include('partials/_footer') -%>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="/js/clean-blog.min.js"></script>
 
 </body>
 
